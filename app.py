@@ -5,9 +5,24 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return """
-    <h1>Cloud Computing Project</h1>
-    <p>This application is deployed using Render.com.</p>
-    <p>Platform as a Service (PaaS) example.</p>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Cloud App</title>
+    </head>
+
+    <body>
+        <h1>Cloud Computing App</h1>
+
+        <button onclick="changeColor()">Change background color</button>
+
+        <script>
+            function changeColor() {
+                document.body.style.backgroundColor = "lightblue";
+            }
+        </script>
+    </body>
+    </html>
     """
 
 if __name__ == "__main__":
